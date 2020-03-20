@@ -1,0 +1,46 @@
+{
+  "name": "AushevIbra/gussi-package",
+  "description": "Laravel package",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "package"
+  ],
+  "require": {
+    "php": "^7.1",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aushev Ibra",
+      "email": "aushevibra@yandex.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "GussiApi\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GussiApi\\Tests\\": "./tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GussiApi\\GussiApiServiceProvider"
+      ],
+      "aliases": {
+        "GussiApi": "GussiApi\\GussiApiFacade"
+      }
+    }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit"
+  }
+}
